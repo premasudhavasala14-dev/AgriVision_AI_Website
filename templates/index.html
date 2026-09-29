@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriVision AI | Smart Farming Platform</title>
+  <meta name="description" content="AgriVision AI - an AI-powered smart agriculture presentation website.">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="demo-banner">AGRI VISION AI • COLLEGE PROJECT DEMO</div>
+
+  <nav class="navbar">
+    <a class="brand" href="#home">
+      <span class="brand-mark">✦</span>
+      <span>Agri<span>Vision</span> AI</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#diagnosis">AI Diagnosis</a>
+      <a href="#recommendation">Recommendation</a>
+      <a href="#about">How it works</a>
+    </div>
+    <a class="nav-button" href="#diagnosis">Try AI Demo →</a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> AI-POWERED SMART AGRICULTURE</div>
+        <h1>
+    AI-powered farming.<br>
+    <em>Smarter decisions.</em>
+</h1>
+
+<p class="hero-text">
+    AgriVision AI brings artificial intelligence to agriculture,
+    helping farmers detect crop diseases, analyze field conditions,
+    and make smarter crop management decisions.
+</p>
+        <div class="hero-actions">
+         <a class="primary-btn" href="#diagnosis">
+    Detect Crop Disease <span>↗</span>
+</a>
+
+<a class="secondary-btn" href="#recommendation">
+    Get Crop Recommendation
+</a>
+        </div>
+        <div class="trust-row">
+          <div><strong>AI</strong><span>Plant Analysis</span></div>
+          <div><strong>24/7</strong><span>Smart Insights</span></div>
+          <div><strong>1</strong><span>Unified Platform</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="field-card">
+          <div class="field-top">
+            <span class="status-dot"></span>
+            <span>FIELD INTELLIGENCE</span>
+            <span class="live">LIVE</span>
+          </div>
+          <div class="field-graphic">
+            <div class="sun"></div>
+            <div class="hill hill-back"></div>
+            <div class="hill hill-front"></div>
+            <div class="crop-row row1">🌱 🌱 🌱 🌱 🌱</div>
+            <div class="crop-row row2">🌱 🌱 🌱 🌱 🌱</div>
+            <div class="crop-row row3">🌱 🌱 🌱 🌱 🌱</div>
+            <div class="scan-line"></div>
+          </div>
+          <div class="field-metrics">
+            <div><span>Crop health</span><b>92%</b></div>
+            <div><span>Soil moisture</span><b>68%</b></div>
+            <div><span>Risk level</span><b class="safe">LOW</b></div>
+          </div>
+        </div>
+        <div class="floating-card ai-card">
+          <div class="mini-icon">✦</div>
+          <div><b>AI Insight</b><small>Crop condition looks healthy</small></div>
+          <span class="check">✓</span>
+        </div>
+        <div class="floating-card weather-card">
+          <span class="weather-icon">☀</span>
+          <div><b>28°C</b><small>Clear • 62% humidity</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div><b>01</b><span>Crop Health<br>Monitoring</span></div>
+      <div><b>02</b><span>AI Disease<br>Detection</span></div>
+      <div><b>03</b><span>Crop & Soil<br>Recommendations</span></div>
+      <div><b>04</b><span>Weather-Aware<br>Insights</span></div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">THE PLATFORM</div>
+          <h2>One dashboard for<br><em>smarter decisions.</em></h2>
+        </div>
+        <p>Designed as a simple digital companion for modern farmers — from planting to harvest.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card featured">
+          <div class="feature-icon">◉</div>
+          <h3>AI Crop Diagnosis</h3>
+          <p>Upload a crop image and demonstrate how computer vision can identify possible plant-health issues.</p>
+          <a href="#diagnosis">Open diagnosis demo →</a>
+          <div class="mini-dashboard">
+            <div class="mini-image">🌿</div>
+            <div><span>Detected</span><b>Leaf condition</b><small>Confidence 94%</small></div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">⌁</div>
+          <h3>Crop Recommendation</h3>
+          <p>Use soil and environmental inputs to generate a suitable crop suggestion for the demonstration.</p>
+          <a href="#recommendation">Try recommendation →</a>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">◌</div>
+          <h3>Smart Weather</h3>
+          <p>Present temperature, humidity and rainfall context alongside farming decisions.</p>
+          <div class="weather-mini"><b>28°</b><span>Clear skies<br>Rain chance 12%</span></div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">▱</div>
+          <h3>Farmer Dashboard</h3>
+          <p>A clean overview of field health, alerts, recommendations and recent AI observations.</p>
+          <div class="progress-line"><span style="width:92%"></span></div>
+          <small>Overall field health <b>92%</b></small>
+        </article>
+      </div>
+    </section>
+
+    <section class="diagnosis-section" id="diagnosis">
+      <div class="section-heading compact">
+        <div>
+          <div class="eyebrow">INTERACTIVE DEMO</div>
+         <h2>AI Crop <em>Disease Detection</em></h2>
+        </div>
+       <p>
+    Upload a crop image and let AgriVision AI analyze
+    the plant for possible diseases and provide a
+    health assessment.
+</p>
+      </div>
+      <div class="diagnosis-panel">
+        <div class="upload-area" id="uploadArea">
+          <input type="file" id="cropImage" accept="image/*" hidden>
+          <div class="upload-icon">↑</div>
+          <h3>Upload a crop image</h3>
+          <p>JPG, PNG or WEBP • Drag & drop or click to browse</p>
+          <button class="outline-btn" onclick="document.getElementById('cropImage').click()">Choose Image</button>
+          <img id="preview" class="preview" alt="Crop preview">
+        </div>
+        <div class="diagnosis-result">
+          <div class="result-head"><span>AI ANALYSIS</span><span class="demo-pill">AI MODEL LIVE</span></div>
+          <div class="result-main">
+    <div class="result-score">
+        <b id="confidence">--%</b>
+        <span>confidence</span>
+    </div>
+
+    <div>
+        <small>Detected condition</small>
+        <h3 id="condition">Waiting for image</h3>
+        <p id="conditionText">Upload a crop image to start AI analysis.</p>
+    </div>
+</div>
+          </div>
+          <div class="recommend-box">
+            <span>✦</span>
+            <div><b>Suggested action</b><p id="action">Continue regular irrigation and monitor the crop for changes.</p></div>
+          </div>
+          <button class="primary-btn full" id="analyzeBtn">Run AI Analysis →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommend-section" id="recommendation">
+      <div class="recommend-copy">
+        <div class="eyebrow">SMART RECOMMENDATION</div>
+        <h2>From farm data to a <em>clear next step.</em></h2>
+        <p>Enter sample field values to demonstrate how an agriculture recommendation engine can turn inputs into an actionable suggestion.</p>
+        <div class="input-grid">
+          <label>Nitrogen (N)<input id="n" type="number" value="90"></label>
+          <label>Phosphorus (P)<input id="p" type="number" value="42"></label>
+          <label>Potassium (K)<input id="k" type="number" value="43"></label>
+          <label>Soil pH<input id="ph" type="number" step="0.1" value="6.5"></label>
+          <label>Temperature<input id="temp" type="number" value="27"></label>
+          <label>Rainfall (mm)<input id="rain" type="number" value="210"></label>
+        </div>
+        <button class="primary-btn" onclick="recommendCrop()">Generate Recommendation →</button>
+      </div>
+      <div class="recommend-output">
+        <div class="output-label">RECOMMENDED CROP</div>
+        <div class="crop-name" id="cropName">Rice</div>
+        <div class="reason" id="cropReason">Based on the sample soil and climate inputs.</div>
+        <div class="output-tags"><span>Suitable soil</span><span>Warm climate</span><span>Good rainfall</span></div>
+        <div class="bar-row"><span>Suitability</span><b id="suitability">91%</b></div>
+        <div class="big-progress"><span id="suitabilityBar" style="width:91%"></span></div>
+        <p class="demo-note">Prototype recommendation for presentation purposes — not agricultural advice.</p>
+      </div>
+    </section>
+
+    <section class="how-section" id="about">
+      <div class="section-heading">
+        <div><div class="eyebrow">HOW IT WORKS</div><h2>A simple <em>AI workflow.</em></h2></div>
+        <p>Four steps connect field observations with useful digital insights.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span>01</span><div class="step-icon">⌁</div><h3>Collect</h3><p>Capture crop images and field information.</p></div>
+        <div class="step"><span>02</span><div class="step-icon">✦</div><h3>Analyze</h3><p>AI models process images and farm parameters.</p></div>
+        <div class="step"><span>03</span><div class="step-icon">◈</div><h3>Recommend</h3><p>Generate understandable crop and care suggestions.</p></div>
+        <div class="step"><span>04</span><div class="step-icon">✓</div><h3>Act</h3><p>Use the insights to support better field decisions.</p></div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div>
+        <div class="eyebrow">AGRIVISION AI</div>
+        <h2>Technology that brings<br><em>intelligence to the field.</em></h2>
+      </div>
+      <a class="primary-btn light" href="#diagnosis">Launch Demo ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="brand-mark">✦</span><span>Agri<span>Vision</span> AI</span></div>
+    <p>AI-powered agriculture • College project prototype</p>
+    <p>© 2026 AgriVision AI</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
